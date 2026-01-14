@@ -1,0 +1,66 @@
+package baitap.ghithub;
+
+import java.util.*;
+
+public class BaitapGhithub {
+
+    public static void main(String[] args) {
+
+        Random rand = new Random();
+        Scanner scanner = new Scanner(System.in);
+
+        int tri1 = rand.nextInt(100);                           
+        double tri2 = 1.8 + rand.nextDouble() * (8.0 - 1.8);   
+        int tri3 = rand.nextInt(78) + 3;                       
+        int tri4 = rand.nextInt(100) + 1;                      
+        double tri5 = 1.0 + rand.nextDouble() * 99.0;          
+        int tri6 = rand.nextInt(10) + 1;                       
+
+        System.out.println("- So tuoi cua Tri la: " + tri1);
+        System.out.println("- Xac suat trung so: " + tri2);
+
+        if (tri3 % 2 == 0) {
+            System.out.println("- So " + tri3 + " la so chan");
+        } else {
+            System.out.println("- So " + tri3 + " la so le");
+        }
+
+        System.out.println("- So nguyen la: " + tri4);
+        System.out.println("- So thuc la: " + tri5);
+
+        if (tri4 > tri5) {
+            System.out.println("---> So nguyen lon hon so thuc");
+        } else if (tri4 < tri5) {
+            System.out.println("---> So thuc lon hon so nguyen");
+        } else {
+            System.out.println("---> So nguyen bang so thuc");
+        }
+
+        System.out.println("So nguyen cua bai 5 la: " + tri6);
+
+        for (int i = 1; i <= 10; i++) {
+            if (i == tri6) {
+                System.out.println(tri6 + " dung!");
+                break;
+            }
+            System.out.print(i + " ");
+        }
+
+        System.out.println();
+
+        do {
+            System.out.print("Nhap so nguyen: ");
+            int tri = scanner.nextInt();
+
+            if (tri > tri4) {
+                System.out.println("Nho hon!");
+            } else if (tri < tri4) {
+                System.out.println("Lon hon!");
+            } else {
+                System.out.println("Chuc mung!");
+                break;
+            }
+        } while (true);
+    }
+}
+

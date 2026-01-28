@@ -1,28 +1,21 @@
+package Assignment7;
 
-package lab;
-
-import java.util.ArrayList;
-import java.util.Random;
+import java.util.Scanner;
 
 public class bai5 {
+
     public static void main(String[] args) {
-        Random rand = new Random();
-        ArrayList<Integer> list = new ArrayList<>();
-
-        for (int i = 0; i < 10; i++) {
-            int num = rand.nextInt(100) + 1; 
-            list.add(num);
+        Scanner scanner = new Scanner(System.in);
+        System.out.print(" Nhap chuoi: ");
+        String S = scanner.nextLine();
+        System.out.print("Nhap ky tu can dem: ");
+        char c = scanner.next().charAt(0);
+        int dem = 0;
+        for (int i = 0; i < S.length(); i++) {
+            if (S.charAt(i) == 0) {
+                dem++;
+            }
         }
-
-        System.out.println("Danh sach ban dau: " + list);
-
-       
-        list.remove(3);
-
-        System.out.println("Danh sach sau khi xoa index 3: " + list);
+        System.out.println("Ky tu " + c + "xuat hien " + dem + " lan trong chuoi ");
     }
 }
-
-
-    
-

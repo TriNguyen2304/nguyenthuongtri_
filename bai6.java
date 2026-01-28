@@ -1,33 +1,26 @@
+package Assignment7;
 
-package lab;
-
-import java.util.ArrayList;
-import java.util.Random;
+import java.util.Scanner;
 
 public class bai6 {
     public static void main(String[] args) {
-        Random rand = new Random();
-        ArrayList<Integer> numbers = new ArrayList<>();
-
-        int evenCount = 0;
-        int oddCount = 0;
+        Scanner sc = new Scanner(System.in);
 
         
-        for (int i = 0; i < 15; i++) {
-            int num = rand.nextInt(50) + 1; 
-            numbers.add(num);
+        System.out.print("Nhập chuỗi gốc: ");
+        String chuoiGoc = sc.nextLine();
 
-            if (num % 2 == 0) {
-                evenCount++;
-            } else {
-                oddCount++;
-            }
-        }
+        System.out.print("Nhập từ cần thay thế: ");
+        String tuCu = sc.nextLine();
 
-        System.out.println("Danh sach so: " + numbers);
-        System.out.println("So chan: " + evenCount);
-        System.out.println("So le: " + oddCount);
+        System.out.print("Nhập từ thay thế: ");
+        String tuMoi = sc.nextLine();
+
+        
+        String chuoiMoi = chuoiGoc.replace(tuCu, tuMoi);
+
+        System.out.println("Output: " + chuoiMoi);
+        
+        sc.close();
     }
 }
-
-

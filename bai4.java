@@ -1,21 +1,16 @@
-package lab;
+package Assignment7;
 
-import java.util.ArrayList;
+import java.util.Scanner;
 
 public class bai4 {
 
     public static void main(String[] args) {
-        ArrayList<String> thanhpho = new ArrayList<>();
-        thanhpho.add("Dak lak");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Nhap chuoi ky tu: ");
+        String S = scanner.nextLine();
+        String result = S.replaceAll("//s+", " ").trim();
 
-        thanhpho.add("London");
-        thanhpho.add("Sai gon");
-        thanhpho.add("Da Nang");
-        boolean London = thanhpho. contains("Lon don");
-       
-        System.out.println(" danh sach co chua Lon Don hay khong" + London);
-    
-
-
+        System.out.println("So tu trong chuoi la: " + S);
+        System.out.println("So tu trong chuoi la: " + S.trim());
     }
-    }
+}
